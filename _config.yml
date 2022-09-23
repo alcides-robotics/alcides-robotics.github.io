@@ -1,0 +1,53 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: ALCiDES Robotics
+email: info@alcides-robotics.com
+description: > # this means to ignore newlines until "baseurl:"
+  Smart mobile robotics for efficient matrial handling
+
+# url: "https://alcides-robotics.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.alcides-robotics.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: # the subpath of your site, e.g. /blog
+
+# Company Information
+company_name: ALCiDES Robotics GmbH
+address_line: Josefstraße 10, 51377 Leverkusen, Germany
+telephone_number: 0049 (0) 214 314 997 0
+fax_number:  0049 (0) 214 314 997 17
+company_email: info@alcides-robotics.com
+google_map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.090116817042!2d7.0131302!3d51.032956299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf2eb6123f697f%3A0x81ab016e9eaa04a7!2sJosefstra%C3%9Fe%2010%2C%2051377%20Leverkusen!5e0!3m2!1sen!2sde!4v1663793376769!5m2!1sen!2sde>
+# Social Link
+facebook_link: http://www.facebook.com
+twitter_link: http://www.twitter.com
+linkedin_link: http://www.linkedin.com
+googleplus_link: http://plus.google.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
