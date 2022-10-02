@@ -1,0 +1,42 @@
+en:
+  home: home
+  software: software
+  products: products
+  company: company
+  blog: blog
+  contact: contact
+  links: links
+  follow_us: Follow us
+  imprint: imprint
+  privacy_policy: privacy policy
+  lang_code: EN
+  flag: uk
+  append: /en
+de:
+  home: startseite
+  software: software
+  products: produkte
+  company: unternehmen
+  blog: blog
+  contact: kontakt
+  links: links
+  follow_us: Folge uns
+  imprint: impressum
+  privacy_policy: datenschutzerklärung
+  lang_code: DE
+  flag: de
+  append: /de
+cn:
+  home: 首页
+  software: 软件
+  products: 产品
+  company: 公司
+  blog: 博客
+  contact: 联系我们
+  links: 链接
+  follow_us: 关注我们
+  imprint: 版本说明
+  privacy_policy: 隐私政策
+  lang_code: 中
+  flag: cn
+  append: /cn

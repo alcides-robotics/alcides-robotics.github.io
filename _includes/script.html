@@ -11,7 +11,7 @@
   $(function ($) {
     let url = window.location.href;
     $('li a').each(function () {
-      if (this.href === url) {
+      if (this.href === url.replace(/\/+$/, '') || this.href === url) {
         $(this).closest('li').addClass('active');
       }
     });
