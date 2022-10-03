@@ -22,5 +22,11 @@ reference: 404
 
     <p><strong>Page not found :(</strong></p>
     <p>The requested page could not be found.</p>
-    <p>Return to <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>.</p>
+    {% assign node = site.pages | where: "reference", "home" %}
+    {% for item in node %}
+    {% if item.lang == page.lang %}
+    {% assign page_home = item %}
+    {% endif %}
+    {% endfor %}
+    <p>Return to <a href="{{ page_home.url }}"> {{ site.data.locales[page.lang].home | capitalize }}</a>.</p>
 </div>

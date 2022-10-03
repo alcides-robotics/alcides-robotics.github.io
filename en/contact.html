@@ -26,52 +26,72 @@ reference: contact
           <p>51377 Leverkusen</p>
           <p>Germany</p>
         </em>
-        <p>Phone: 0049 (0) 214 314 997 0</p>
-        <p>Fax: 0049 (0) 214 314 997 17</p>
-        <p><em><strong>Email: info@alcides-robotics.com</strong></em></p>
+        <p>{{ site.data.locales[page.lang].phone }}: 0049 (0) 214 314 997 0</p>
+        <p>{{ site.data.locales[page.lang].fax }}: 0049 (0) 214 314 997 17</p>
+        <p><em><strong>{{ site.data.locales[page.lang].email }}: info@alcides-robotics.com</strong></em></p>
         <br>
       </div>
       <!-- End Col Find-us -->
 
       <!-- Begin Col Contact Form -->
       <div class="col-lg-8 contact-block">
-        <h3>Contact Form</h3>
+        <h3>{{ site.data.locales[page.lang].contact_form }}</h3>
         <form action="https://api.web3forms.com/submit" method="POST" class="needs-validation">
           <input type="hidden" name="access_key" value="9503d3e9-effc-41a9-9da2-a727c4d6aee3">
           <fieldset>
             <div class="form-group">
-              <label for="name" class="control-label">Name *</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+              <label for="name" class="control-label">{{ site.data.locales[page.lang].name }} *</label>
+              <input type="text" class="form-control" id="name" name="name"
+                placeholder="{{ site.data.locales[page.lang].placeholder_name }}" required>
             </div>
             <div class="form-group">
-              <label for="company" class="control-label">Company *</label>
-              <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company name"
-                required>
+              <label for="company" class="control-label">{{ site.data.locales[page.lang].company | capitalize }}
+                *</label>
+              <input type="text" class="form-control" id="company" name="company"
+                placeholder="{{ site.data.locales[page.lang].placeholder_company }}" required>
             </div>
             <div class="form-group">
-              <label class="control-label" for="phone">Phone number</label>
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number">
+              <label class="control-label" for="phone">{{ site.data.locales[page.lang].phone_number }}</label>
+              <input type="tel" class="form-control" name="phone" id="phone"
+                placeholder="{{ site.data.locales[page.lang].placeholder_phone_number }}">
             </div>
             <div class="form-group">
-              <label class="control-label" for="email">E-mail *</label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+              <label class="control-label" for="email">{{ site.data.locales[page.lang].email }} *</label>
+              <input type="email" class="form-control" name="email" id="email"
+                placeholder="{{ site.data.locales[page.lang].placeholder_email }}" required>
             </div>
             <div class="form-group">
-              <label class="control-label" for="message">Message *</label>
-              <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+              <label class="control-label" for="message">{{ site.data.locales[page.lang].message }} *</label>
+              <textarea class="form-control" name="message" id="message" rows="3"
+                placeholder="{{ site.data.locales[page.lang].placeholder_message }}"></textarea>
             </div>
+            <!-- Find the imprint and privacy policy-->
+            {% assign node = site.pages | where: "lang", page.lang %}
+            {% for item in node %}
+            {% if item.reference == "imprint" %}
+            {% assign page_imprint = item %}
+            {% endif %}
+            {% if item.reference == "privacy_policy" %}
+            {% assign page_privacy_policy = item %}
+            {% endif %}
+            {% if item.reference == "thanks" %}
+            {% assign page_thanks = item %}
+            {% endif %}
+            {% endfor %}
             <div class="form-check form-group">
               <input class="form-check-input" type="checkbox" value="" id="agreement" required>
               <label class="form-check-label" for="agreement">
-                I agree with <a href="{{ site.url }}{{ site.baseurl }}/imprint">the terms of use </a> and <a
-                  href="{{ site.url }}{{ site.baseurl }}/privacy-policy">the privacy policy.</a>
+                {{ site.data.locales[page.lang].contact_form_agreement_1}} <a href="{{ page_imprint.url }}">{{
+                  site.data.locales[page.lang].contact_form_agreement_2 }}</a> {{
+                site.data.locales[page.lang].contact_form_agreement_3 }} <a href="{{ page_privacy_policy.url }}">{{
+                  site.data.locales[page.lang].contact_form_agreement_4}}</a>{{ site.data.locales[page.lang].contact_form_agreement_5 }}
               </label>
             </div>
             <div class="form-comment">
-              <p></p>All fields marked with an asterisk* are mandatory fields.</p>
+              <p>{{ site.data.locales[page.lang].contact_form_comments }}</p>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-            <input type="hidden" name="redirect" value="{{ site.url }}{{ site.baseurl }}/thanks.html">
+            <input type="hidden" name="redirect" value="{{ page_thanks.url }}">
           </fieldset>
         </form>
       </div>

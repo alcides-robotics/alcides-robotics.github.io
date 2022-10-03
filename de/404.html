@@ -20,7 +20,13 @@ reference: 404
 <div class="container">
     <h1>404</h1>
 
-    <p><strong>Page not found :(</strong></p>
-    <p>The requested page could not be found.</p>
-    <p>Return to <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>.</p>
+    <p><strong>Seite nicht gefunden :(</strong></p>
+    <p>Die angeforderte Seite konnte nicht gefunden werden.</p>
+    {% assign node = site.pages | where: "reference", "home" %}
+    {% for item in node %}
+    {% if item.lang == page.lang %}
+    {% assign page_home = item %}
+    {% endif %}
+    {% endfor %}
+    <p>Rückkehr zur <a href="{{ page_home.url }}">{{ site.data.locales[page.lang].home }}</a>.</p>
 </div>
