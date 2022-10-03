@@ -7,7 +7,7 @@ git_url: git@github.com:alcides-robotics/alcides-robotics.github.io  # remote re
 # If using GitHub project pages, set the branch to 'gh-pages'.
 # For GitHub user/organization pages or Heroku, set the branch to 'master'.
 #
-git_branch: main                        # Git branch where static site files are commited
+git_branch: gh-pages                        # Git branch where static site files are commited
 
 
 # remote_path:                            # Destination directory
