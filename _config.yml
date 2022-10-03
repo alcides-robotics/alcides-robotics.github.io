@@ -16,7 +16,7 @@
 title: ALCiDES Robotics
 email: info@alcides-robotics.com
 description: > # this means to ignore newlines until "baseurl:"
-  Smart mobile robotics for efficient matrial handling
+  Smart mobile robotics for efficient material handling
 
 # url: "https://alcides-robotics.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://www.alcides-robotics.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -51,3 +51,24 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# languages
+languages: [en, de]
+default_lang: en
+defaults:
+  -
+    scope:
+      path: en # an empty string here means all files in the project
+      types: pages
+    values:
+      lang: en
+  -
+    scope:
+      path: de 
+      types: pages
+    values:
+      lang: de
+
+exclude:
+  - README.md
+  - LICENSE

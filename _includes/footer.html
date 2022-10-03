@@ -1,9 +1,15 @@
 <!-- BEGIN Footer -->
 <footer>
     <div class="container">
+        <!-- permalink append based on languages -->
+        {% if page.lang == site.default_lang %}
+        {% assign append = "" %}
+        {% else %}
+        {% assign append = site.data.locales[page.lang].append %}
+        {% endif %}
         <div class="row">
             <div class="col-md-4">
-                <h3><i class="fa fa-map-marker"></i> Contact</h3>
+                <h3><i class="fa fa-map-marker"></i> {{ site.data.locales[page.lang].contact | capitalize }}</h3>
                 <p class="footer-contact">
                     ALCiDES Robotics GmbH <br>
                     <em>
@@ -11,21 +17,21 @@
                         51377 Leverkusen <br>
                         Germany <br>
                     </em>
-                    Phone: 0049 (0) 214 314 997 0 <br>
-                    Fax: 0049 (0) 214 314 997 17 <br>
-                    Email: info@alcides-robotics.com<br>
+                    {{ site.data.locales[page.lang].phone }}: 0049 (0) 214 314 997 0 <br>
+                    {{ site.data.locales[page.lang].fax }}: 0049 (0) 214 314 997 17 <br>
+                    {{ site.data.locales[page.lang].email }}: info@alcides-robotics.com<br>
                 </p>
             </div>
             <div class="col-md-4">
-                <h3><i class="fa fa-external-link"></i> Links</h3>
-                <p><a href="{{ site.url }}{{ site.baseurl }}/company"> Company </a></p>
-                <p><a href="{{ site.url }}{{ site.baseurl }}/software"> Software </a></p>
-                <p><a href="{{ site.url }}{{ site.baseurl }}/products"> Products </a></p>
-                <p><a href="{{ site.url }}{{ site.baseurl }}/blog"> Blog </a></p>
-                <p><a href="{{ site.url }}{{ site.baseurl }}/contact"> Contact </a></p>
+                <h3><i class="fa fa-external-link"></i> {{ site.data.locales[page.lang].links | capitalize }}</h3>
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/company"> {{ site.data.locales[page.lang].company | capitalize }} </a></p>
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/software"> {{ site.data.locales[page.lang].software | capitalize }} </a></p>
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products"> {{ site.data.locales[page.lang].products | capitalize }} </a></p>
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/blog"> {{ site.data.locales[page.lang].blog | capitalize }} </a></p>
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/contact"> {{ site.data.locales[page.lang].contact | capitalize }} </a></p>
             </div>
             <div class="col-md-4">
-                <h3><i class="fa fa-heart"></i> Follow Us</h3>
+                <h3><i class="fa fa-heart"></i> {{ site.data.locales[page.lang].follow_us }}</h3>
                 <div id="social-icons">
 
 
@@ -54,14 +60,14 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="copyright text-start"></p>
-                &copy; Copyright 2022 &nbsp; <a href="{{ site.url }}{{ site.baseurl }}/">ALCiDES Robotics GmbH</a>
+                &copy; Copyright 2022 &nbsp; <a href="{{ site.url }}{{ site.baseurl }}{{ append }}">ALCiDES Robotics GmbH</a>
                 </p>
             </div>
             <div class="col-md-6">
                 <p class="imprint text-end">
-                    <a href="{{ site.url }}{{ site.baseurl}}/privacy-policy"> PRIVACY POLICY </a>
+                    <a href="{{ site.url }}{{ site.baseurl}}{{ append }}/privacy-policy"> {{ site.data.locales[page.lang].privacy_policy | upcase}} </a>
                     &nbsp;
-                    <a href="{{ site.url }}{{ site.baseurl }}/imprint"> IMPRINT </a>
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ append }}/imprint"> {{ site.data.locales[page.lang].imprint | upcase}} </a>
                 </p>
             </div>
         </div>
