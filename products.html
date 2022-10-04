@@ -53,11 +53,29 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="https://www.alcides-robotics.com">home</a>
                 </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/software">software</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/products">products</a>
+                -->
+                <!-- Products dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.alcides-robotics.com/products"
+                        id="navbarProductDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarProductDropdown">
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#software">
+                                    Software</a></li>
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#robots">
+                                    AMR/Forklifts</a></li>
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#services">
+                                    Services</a></li>
+                    </ul>
+                </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/company">company</a>
@@ -115,6 +133,7 @@
 </nav>
 
 <!-- End Header -->
+
 <!-- BEGIN Scripts -->
 <script type="text/javascript" src="https://www.alcides-robotics.com/assets/js/jquery-3.6.0.js"></script>
 <script src="https://www.alcides-robotics.com/assets/bootstrap/js/bootstrap.bundle.js"></script>
@@ -127,14 +146,15 @@
 <script>
   $(function ($) {
     let url = window.location.href;
-    $('li a').each(function () {
-      if (this.href === url.replace(/\/+$/, '') || this.href === url) {
+    $("li a:not('.dropdown-item')").each(function () {
+      if (this.href === url.replace(/\/+$/, '') || this.href === url || this.href == url.split('#')[0]) {
         $(this).closest('li').addClass('active');
       }
     });
   });
 </script>
 <!-- End Scripts -->
+
 
 <body>
   <!-- Begin #carousel-section-products -->
@@ -179,19 +199,23 @@
 <section id="products" class="section-wrapper">
   <div class="container">
     <!-- Begin Summary Row -->
-    <div class="row">
+    <div class="row" id="software">
+      <div class="content-block">
+        <p class="content-block-title">Our Software</p>
+        <p class="content-block-body">
+        Our software consists of a swarm intelligence-based navigation system and AI based vision system.
+        </p>
+      </div>
+    </div> 
+    <!-- End Summary Row -->
+    <!-- Begin Products Row-->
+    <div class="row" id="robots">
       <div class="content-block">
         <p class="content-block-title">Our Products</p>
-        <p class="content-block-body"> We have great products.</p>
-      </div>
-    </div> <!-- End Summary Row -->
-    <!-- Begin Products Row-->
-    <div class="row">
-      <div class="content-block">
         <div class="row content-block-body">
           <div class="col-12 col-md-6 product-entry"> <a href="https://www.alcides-robotics.com/products/product_1">
               <div class="image-container img-responsive bg-image hover-zoom"> <img
-                  src="https://www.alcides-robotics.com/assets/img/alcides/product_1.png" alt="Image of product 1">
+                  src="https://www.alcides-robotics.com/assets/img/alcides/AGV.jpg" alt="Image of product 1">
               </div>
             </a>
             <div class="product-info">
@@ -206,7 +230,7 @@
           <div class="col-12 col-md-6 product-entry">
             <a href="https://www.alcides-robotics.com/products/product_2">
               <div class="image-container img-responsive bg-image hover-zoom">
-                <img src="https://www.alcides-robotics.com/assets/img/alcides/product_2.png" alt="Image of product 2">
+                <img src="https://www.alcides-robotics.com/assets/img/alcides/forklift.jpg" alt="Image of product 2">
               </div>
             </a>
             <div class="product-info">
@@ -222,10 +246,21 @@
       </div>
     </div>
     <!-- End Products Row -->
+    <!-- Begin Services Row -->
+    <div class="row" id="services">
+      <div class="content-block">
+        <p class="content-block-title">Our Services</p>
+        <p class="content-block-body">
+        Besides our AMRs and autonomous forklift, we also provide one-stop solution through our services, includes requirement analysis, simulation, etc. 
+        Just tell us your requirements, we will bring you a complete solution.
+        </p>
+      </div>
+    </div> 
+    <!-- End Service Row -->
     <!-- Start Product Query Row -->
     <div class="row" id="product-query">
       <div class="content-block">
-        <p class="content-block-title">You want to know more about our smart vehicles?</p>
+        <p class="content-block-title">Want to know more about our smart vehicles/solutions?</p>
         <p class="content-block-title">No problem. We are just a button way!</p>
         <a class="btn btn-primary" href="https://www.alcides-robotics.com/contact">Send your query</a>
       </div>
@@ -237,6 +272,7 @@
 <div class=" container">
   <p><strong>TODO: </strong>Update pictures, layout, texts</p>
 </div>
+
 </body>
 
 <!-- BEGIN Footer -->

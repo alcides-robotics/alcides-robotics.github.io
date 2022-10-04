@@ -53,11 +53,29 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="https://www.alcides-robotics.com">home</a>
                 </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/software">software</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/products">products</a>
+                -->
+                <!-- Products dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.alcides-robotics.com/products"
+                        id="navbarProductDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarProductDropdown">
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#software">
+                                    Software</a></li>
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#robots">
+                                    AMR/Forklifts</a></li>
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#services">
+                                    Services</a></li>
+                    </ul>
+                </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/company">company</a>
@@ -115,6 +133,7 @@
 </nav>
 
 <!-- End Header -->
+
 <!-- BEGIN Scripts -->
 <script type="text/javascript" src="https://www.alcides-robotics.com/assets/js/jquery-3.6.0.js"></script>
 <script src="https://www.alcides-robotics.com/assets/bootstrap/js/bootstrap.bundle.js"></script>
@@ -127,14 +146,15 @@
 <script>
   $(function ($) {
     let url = window.location.href;
-    $('li a').each(function () {
-      if (this.href === url.replace(/\/+$/, '') || this.href === url) {
+    $("li a:not('.dropdown-item')").each(function () {
+      if (this.href === url.replace(/\/+$/, '') || this.href === url || this.href == url.split('#')[0]) {
         $(this).closest('li').addClass('active');
       }
     });
   });
 </script>
 <!-- End Scripts -->
+
 
 <body>
   <!-- Begin #carousel-section-blog -->
@@ -199,6 +219,18 @@
     <!-- End Summary Row -->
     <!-- Begin Blog Row-->
     <div class="row">
+      <div class="col-md-12 blog-entry">
+        <div class="blog-entry-block"
+          style="background-image: url('https://sulibo.github.io/alcides-robotics/assets/img/slider/alcides/slide1.jpeg');">
+          <div class="blog-entry-content">
+            <h3><a href="thanks.html">Bauma 2022</a></h3>
+            <hr>
+            <p>Visit us at Bauma 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-8 blog-entry">
         <div class="blog-entry-block"
           style="background-image: url('https://sulibo.github.io/alcides-robotics/assets/img/slider/alcides/slide1.jpeg');">
@@ -250,6 +282,7 @@
 <div class=" container">
   <p><strong>TODO: </strong>Update pictures, layout, texts</p>
 </div>
+
 </body>
 
 <!-- BEGIN Footer -->

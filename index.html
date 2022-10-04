@@ -53,11 +53,29 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="https://www.alcides-robotics.com">home</a>
                 </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/software">software</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/products">products</a>
+                -->
+                <!-- Products dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.alcides-robotics.com/products"
+                        id="navbarProductDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarProductDropdown">
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#software">
+                                    Software</a></li>
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#robots">
+                                    AMR/Forklifts</a></li>
+                        <li><a class="dropdown-item" href="https://www.alcides-robotics.com/products#services">
+                                    Services</a></li>
+                    </ul>
+                </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.alcides-robotics.com/company">company</a>
@@ -115,6 +133,7 @@
 </nav>
 
 <!-- End Header -->
+
 <!-- BEGIN Scripts -->
 <script type="text/javascript" src="https://www.alcides-robotics.com/assets/js/jquery-3.6.0.js"></script>
 <script src="https://www.alcides-robotics.com/assets/bootstrap/js/bootstrap.bundle.js"></script>
@@ -127,8 +146,8 @@
 <script>
   $(function ($) {
     let url = window.location.href;
-    $('li a').each(function () {
-      if (this.href === url.replace(/\/+$/, '') || this.href === url) {
+    $("li a:not('.dropdown-item')").each(function () {
+      if (this.href === url.replace(/\/+$/, '') || this.href === url || this.href == url.split('#')[0]) {
         $(this).closest('li').addClass('active');
       }
     });
@@ -136,197 +155,201 @@
 </script>
 <!-- End Scripts -->
 
+
 <body>
-    <!-- Begin #carousel-section-home -->
-    <section id="carousel-section-home">
-        <div id="carousel-home" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://www.alcides-robotics.com/assets/img/slider/alcides/slide1.jpeg"
-                        class="d-block w-100" alt="slide-1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p class="carousel-title">First slide label</p>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://www.alcides-robotics.com/assets/img/slider/alcides/slide2.jpeg"
-                        class="d-block w-100" alt="slide-2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p class="carousel-title">Second slide label</p>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://www.alcides-robotics.com/assets/img/slider/alcides/slide3.jpeg"
-                        class="d-block w-100" alt="slide-3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p class="carousel-title">Third slide label</p>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-home" data-bs-slide="prev">
-                <span class="fa-solid fa-angles-left fa-3x" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-home" data-bs-slide="next">
-                <span class="fa-solid fa-angles-right fa-3x" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+  <!-- Begin #carousel-section-home -->
+<section id="carousel-section-home">
+    <div id="carousel-home" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
-    </section>
-    <!-- End #carousel-section-home -->
-
-
-    <!-- Begin #profile-section -->
-    <section id="profile" class="section-wrapper">
-        <!-- Begin Main Container -->
-        <div class="container">
-            <!-- Begin Summary Row -->
-            <div class="row">
-                <div class="content-block">
-                    <p class="content-block-title">Mens agitat molem</p>
-                    <p class="content-block-subtitle">"Mind moves matter"</p>
-                    <div class="row text-start content-block-body">
-                        <div class="col-md-6">
-                            ALCiDES Robotics is a high-tech startup based in Leverkusen. Our team members come from KIT,
-                            KU Leuven and Eindhoven University of Technology.
-                        </div>
-                        <div class="col-md-6">
-                            Our mission is to develop intelligent robotics for efficient and flexible logistics by, as
-                            the
-                            Latin motto describes, using software (the mind) to drive autonomous mobile robots for
-                            material handling (moving matters).
-                        </div>
-                    </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.alcides-robotics.com/assets/img/slider/alcides/slide1.jpeg"
+                    class="d-block w-100" alt="slide-1">
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="carousel-title">First slide label</p>
+                    <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
-            <!-- End Summary Row -->
-
-
-            <!-- Begin Feature Row-->
-            <div class="row">
-                <div class="content-block">
-                    <div class="content-block-title">
-                        Why ALCiDES?
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="feature-entry">
-                                <p class="feature-icon"><span class="fa-solid fa-microchip fa-5x"></span></p>
-                                <h4 class="feature-title">Standard Hardware</h4>
-                                <p class="feature-body">Standard Hardware satisfying safety requirements: AGV, Automated
-                                    Forklift, AMR</p>
-                                <p><a href="#">Find Out More</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="feature-entry">
-                                <p class="feature-icon"><i class="fa-solid fa-code fa-5x"></i></p>
-                                <h4 class="feature-title">Intelligent Software</h4>
-                                <p class="feature-body">intelligence navigation system + AI vision system + cloud fleet
-                                    management system</p>
-                                <p><a href="#">Find Out More</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="feature-entry">
-                                <p class="feature-icon"><i class="fa-solid fa-suitcase fa-5x"></i></p>
-                                <h4 class="feature-title">One-Stop Solution</h4>
-                                <p class="feature-body">Requirements analysis, simulation, optimization, turnkey
-                                    delivery,
-                                    customer support</p>
-                                <p><a href="#">Find Out More</a></p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="carousel-item">
+                <img src="https://www.alcides-robotics.com/assets/img/slider/alcides/slide2.jpeg"
+                    class="d-block w-100" alt="slide-2">
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="carousel-title">Second slide label</p>
+                    <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
-            <!-- End Feature Row -->
-            <!-- Begin Products Row-->
-            <div class="row">
-                <div class="content-block">
-                    <div class="content-block-title">
-                        <p>Meet Hercules</p>
-                    </div>
-                    <div class="row content-block-body">
-                        <div class="col-12 col-md-6 product-entry">
-                            <a href="https://www.alcides-robotics.com/products/product_1">
-                                <div class="image-container img-responsive bg-image hover-zoom">
-                                    <img src="https://www.alcides-robotics.com/assets/img/alcides/product_1.png"
-                                        alt="Image of product 1">
-                                </div>
-                            </a>
-                            <div class="product-info">
-                                <p class="product-name">Hercules Standard
-                                <p>
-                                <p class="product-alias">Main property of product 1</p>
-                                <p class="product-description">This latin motto accurately describes Alcides Robotics'
-                                    mission: using
-                                    intelligent software (the mind) to drive autonomous mobile robots for material
-                                    handling
-                                    (moving
-                                    matters).</p>
-                                <a class="btn btn-primary"
-                                    href="https://www.alcides-robotics.com/products/product_2">Learn
-                                    More</a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 product-entry">
-                            <a href="https://www.alcides-robotics.com/products/product_2">
-                                <div class="image-container img-responsive bg-image hover-zoom">
-                                    <img src="https://www.alcides-robotics.com/assets/img/alcides/product_2.png"
-                                        alt="Image of product 2">
-                                </div>
-                            </a>
-                            <div class="product-info">
-                                <p class="product-name">Hercules Pro</p>
-                                <p class="product-alias">Main property of product 2</p>
-                                <p class="product-description">This latin motto accurately describes Alcides Robotics'
-                                    mission: using
-                                    intelligent software (the mind) to drive autonomous mobile robots for material
-                                    handling
-                                    (moving
-                                    matters).</p>
-                                <a class="btn btn-primary"
-                                    href="https://www.alcides-robotics.com/products/product_2">Learn
-                                    More</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="carousel-item">
+                <img src="https://www.alcides-robotics.com/assets/img/slider/alcides/slide3.jpeg"
+                    class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="carousel-title">Third slide label</p>
+                    <p>Some representative placeholder content for the third slide.</p>
                 </div>
             </div>
-            <!-- End Products Row -->
-            <!-- Start Product Query Row -->
-            <div class="row" id="product-query">
-                <div class="content-block">
-                    <p class="content-block-title">You want to know more about our smart vehicles?</p>
-                    <p class="content-block-title">No problem. We are just a button way!</p>
-                    <a class="btn btn-primary" href="https://www.alcides-robotics.com/contact">Query Now</a>
-                </div>
-            </div>
-            <!-- End Product Query Row -->
         </div>
-        <!-- End Main Container -->
-    </section>
-    <!-- End #services-section -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-home" data-bs-slide="prev">
+            <span class="fa-solid fa-angles-left fa-3x" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-home" data-bs-slide="next">
+            <span class="fa-solid fa-angles-right fa-3x" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+</section>
+<!-- End #carousel-section-home -->
 
-    <!-- TODO -->
+
+<!-- Begin #profile-section -->
+<section id="profile" class="section-wrapper">
+    <!-- Begin Main Container -->
     <div class="container">
-        <p><strong>TODO: </strong>Update pictures, layout, texts</p>
+        <!-- Begin Summary Row -->
+        <div class="row">
+            <div class="content-block">
+                <p class="content-block-title">Mens agitat molem</p>
+                <p class="content-block-subtitle">"Mind moves matter"</p>
+                <div class="row text-start content-block-body">
+                    <div class="col-md-6">
+                        ALCiDES Robotics is a high-tech startup based in Leverkusen. Our team members come from KIT,
+                        KU Leuven and Eindhoven University of Technology.
+                    </div>
+                    <div class="col-md-6">
+                        Our mission is to develop intelligent robotics for efficient and flexible logistics by, as
+                        the
+                        Latin motto describes, using software (the mind) to drive autonomous mobile robots for
+                        material handling (moving matters).
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Summary Row -->
+
+
+        <!-- Begin Feature Row-->
+        <div class="row">
+            <div class="content-block">
+                <div class="content-block-title">
+                    Why ALCiDES?
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="feature-entry">
+                            <p class="feature-icon"><span class="fa-solid fa-microchip fa-5x"></span></p>
+                            <h4 class="feature-title">Standardized Products</h4>
+                            <p class="feature-body">Standardized products for versatile applications: AMR, Automated
+                                Forklift for different applications</p>
+                            <p><a href="/products#robots">Find Out More</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="feature-entry">
+                            <p class="feature-icon"><i class="fa-solid fa-code fa-5x"></i></p>
+                            <h4 class="feature-title">Intelligent Software</h4>
+                            <p class="feature-body">high accuracy navigation system + AI vision system + cloud fleet
+                                management system</p>
+                            <p><a href="/products#software">Find Out More</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="feature-entry">
+                            <p class="feature-icon"><i class="fa-solid fa-suitcase fa-5x"></i></p>
+                            <h4 class="feature-title">One-Stop Solution</h4>
+                            <p class="feature-body">Requirements analysis, simulation, optimization, turnkey
+                                delivery,
+                                customer support</p>
+                            <p><a href="/products#services">Find Out More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Feature Row -->
+        <!-- Begin Products Row-->
+        <div class="row">
+            <div class="content-block">
+                <div class="content-block-title">
+                    <p>Meet Hercules</p>
+                </div>
+                <div class="row content-block-body">
+                    <div class="col-12 col-md-6 product-entry">
+                        <a href="https://www.alcides-robotics.com/products/product_1">
+                            <div class="image-container img-responsive bg-image hover-zoom">
+                                <img src="https://www.alcides-robotics.com/assets/img/alcides/AGV.jpg"
+                                    alt="Image of product 1">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-name">Hercules Standard
+                            <p>
+                            <p class="product-alias">Main property of product 1</p>
+                            <p class="product-description">This latin motto accurately describes Alcides Robotics'
+                                mission: using
+                                intelligent software (the mind) to drive autonomous mobile robots for material
+                                handling
+                                (moving
+                                matters).</p>
+                            <a class="btn btn-primary"
+                                href="https://www.alcides-robotics.com/products/product_2">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 product-entry">
+                        <a href="https://www.alcides-robotics.com/products/product_2">
+                            <div class="image-container img-responsive bg-image hover-zoom">
+                                <img src="https://www.alcides-robotics.com/assets/img/alcides/forklift.jpg"
+                                    alt="Image of product 2">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-name">Hercules Pro</p>
+                            <p class="product-alias">Main property of product 2</p>
+                            <p class="product-description">This latin motto accurately describes Alcides Robotics'
+                                mission: using
+                                intelligent software (the mind) to drive autonomous mobile robots for material
+                                handling
+                                (moving
+                                matters).</p>
+                            <a class="btn btn-primary"
+                                href="https://www.alcides-robotics.com/products/product_2">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Products Row -->
+        <!-- Start Product Query Row -->
+        <div class="row" id="product-query">
+            <div class="content-block">
+                <p class="content-block-title">You want to know more about our smart vehicles?</p>
+                <p class="content-block-title">No problem. We are just a button way!</p>
+                <a class="btn btn-primary" href="https://www.alcides-robotics.com/contact">Query Now</a>
+            </div>
+        </div>
+        <!-- End Product Query Row -->
     </div>
+    <!-- End Main Container -->
+</section>
+<!-- End #services-section -->
+</div>
+
+<!-- TODO -->
+<div class="container">
+    <p><strong>TODO: </strong>Update pictures, layout, texts</p>
+</div>
+
 </body>
 
 <!-- BEGIN Footer -->
