@@ -46,19 +46,23 @@ reference: products
 <section id="products" class="section-wrapper">
   <div class="container">
     <!-- Begin Summary Row -->
-    <div class="row">
+    <div class="row" id="software">
+      <div class="content-block">
+        <p class="content-block-title">Our Software</p>
+        <p class="content-block-body">
+        Our software consists of a swarm intelligence-based navigation system and AI based vision system.
+        </p>
+      </div>
+    </div> 
+    <!-- End Summary Row -->
+    <!-- Begin Products Row-->
+    <div class="row" id="robots">
       <div class="content-block">
         <p class="content-block-title">Our Products</p>
-        <p class="content-block-body"> We have great products.</p>
-      </div>
-    </div> <!-- End Summary Row -->
-    <!-- Begin Products Row-->
-    <div class="row">
-      <div class="content-block">
         <div class="row content-block-body">
           <div class="col-12 col-md-6 product-entry"> <a href="{{ site.url }}{{ site.baseurl }}/products/product_1">
               <div class="image-container img-responsive bg-image hover-zoom"> <img
-                  src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/product_1.png" alt="Image of product 1">
+                  src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/AGV.jpg" alt="Image of product 1">
               </div>
             </a>
             <div class="product-info">
@@ -73,7 +77,7 @@ reference: products
           <div class="col-12 col-md-6 product-entry">
             <a href="{{ site.url }}{{ site.baseurl }}/products/product_2">
               <div class="image-container img-responsive bg-image hover-zoom">
-                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/product_2.png" alt="Image of product 2">
+                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/forklift.jpg" alt="Image of product 2">
               </div>
             </a>
             <div class="product-info">
@@ -89,10 +93,21 @@ reference: products
       </div>
     </div>
     <!-- End Products Row -->
+    <!-- Begin Services Row -->
+    <div class="row" id="services">
+      <div class="content-block">
+        <p class="content-block-title">Our Services</p>
+        <p class="content-block-body">
+        Besides our AMRs and autonomous forklift, we also provide one-stop solution through our services, includes requirement analysis, simulation, etc. 
+        Just tell us your requirements, we will bring you a complete solution.
+        </p>
+      </div>
+    </div> 
+    <!-- End Service Row -->
     <!-- Start Product Query Row -->
     <div class="row" id="product-query">
       <div class="content-block">
-        <p class="content-block-title">You want to know more about our smart vehicles?</p>
+        <p class="content-block-title">Want to know more about our smart vehicles/solutions?</p>
         <p class="content-block-title">No problem. We are just a button way!</p>
         <a class="btn btn-primary" href="{{ site.url }}{{ site.baseurl }}/contact">Send your query</a>
       </div>
