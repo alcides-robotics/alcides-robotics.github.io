@@ -421,13 +421,14 @@ tion-wrapper
 * ==========================================================================
 */
 .carousel-caption {
-    color: var(--alcides-blue) !important;
+    /* color: var(--alcides-blue) !important; */
+    color: white;
     font-weight: bold;
     font-size: 2rem;
 }
 
 .carousel-caption .carousel-title {
-    color: var(--alcides-blue);
+    /* color: var(--alcides-blue); */
     font-size: 3rem;
 }
 
