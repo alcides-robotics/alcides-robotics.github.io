@@ -194,13 +194,17 @@ a:hover {
     font-size: 1.2rem;
 }
 
+.product-query-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 #product-query .btn-primary {
     margin-top: 1.5rem;
     background: var(--alcides-blue);
     color: white !important;
     font-size: 1.2rem;
 }
-tion-wrapper 
 * ==========================================================================
 * Company
 * ==========================================================================
