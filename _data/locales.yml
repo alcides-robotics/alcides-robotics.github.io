@@ -5,7 +5,7 @@ en:
   company: company
   blog: blog
   contact: contact
-  robots: AMR/Forklifts
+  robots: Robots
   services: Services
   links: links
   follow_us: Follow us
@@ -40,7 +40,7 @@ de:
   company: unternehmen
   blog: blog
   contact: kontakt
-  robots: AMR/Gabelstapler
+  robots: Robots
   services: Dienstleistungen
   links: links
   follow_us: Folge uns
@@ -76,7 +76,7 @@ cn:
   company: 公司
   blog: 博客
   contact: 联系我们
-  robots: AMR/无人叉车
+  robots: 机器人
   services: 服务
   links: 链接
   follow_us: 关注我们

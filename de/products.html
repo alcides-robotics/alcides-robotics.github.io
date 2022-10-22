@@ -7,19 +7,23 @@ reference: products
 <!-- Begin #carousel-section-products -->
 <section id="carousel-section-products">
   <div id="carousel-products" class="carousel slide" data-bs-ride="false">
+    <!--
     <div class="carousel-indicators"> <button type="button" data-bs-target="#carousel-products" data-bs-slide-to="0"
         class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
         data-bs-target="#carousel-products" data-bs-slide-to="1" aria-label="Slide 2"></button> <button type="button"
-        data-bs-target="#carousel-products" data-bs-slide-to="2" aria-label="Slide 3"></button> </div>
+        data-bs-target="#carousel-products" data-bs-slide-to="2" aria-label="Slide 3"></button> 
+    </div>
+    -->
     <div class="carousel-inner">
-      <div class="carousel-item active"> <img
-          src="{{ site.url }}{{ site.baseurl }}/assets/img/slider/alcides/slide1.jpeg" class="d-block w-100"
+      <div class="carousel-item active">
+        <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/background_application.png" class="d-block w-100"
           alt="slide-1">
         <div class="carousel-caption d-none d-md-block">
-          <p class="carousel-title">First slide label</p>
-          <p>Some representative placeholder content for the first slide.</p>
+          <p class="carousel-title">ALCiDES Robotics</p>
+          <p>Smart mobile robots for efficient material handling</p>
         </div>
       </div>
+      <!--
       <div class="carousel-item"> <img src="{{ site.url }}{{ site.baseurl }}/assets/img/slider/alcides/slide2.jpeg"
           class="d-block w-100" alt="slide-2">
         <div class="carousel-caption d-none d-md-block">
@@ -34,73 +38,115 @@ reference: products
           <p>Some representative placeholder content for the third slide.</p>
         </div>
       </div>
-    </div> <button class="carousel-control-prev" type="button" data-bs-target="#carousel-products" data-bs-slide="prev">
+      -->
+    </div>
+    <!--
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-products" data-bs-slide="prev">
       <span class="fa-solid fa-angles-left fa-3x" aria-hidden="true"></span> <span
         class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" type="button"
       data-bs-target="#carousel-products" data-bs-slide="next"> <span class="fa-solid fa-angles-right fa-3x"
-        aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+        aria-hidden="true"></span> <span class="visually-hidden">Next</span> 
+    </button>
+    -->
   </div>
-</section>
 </section> <!-- End #carousel-section-products -->
 <!-- Begin #company-section -->
 <section id="products" class="section-wrapper">
   <div class="container">
-    <!-- Begin Summary Row -->
-    <div class="row">
-      <div class="content-block">
-        <p class="content-block-title">Our Products</p>
-        <p class="content-block-body"> We have great products.</p>
-      </div>
-    </div> <!-- End Summary Row -->
-    <!-- Begin Products Row-->
     <div class="row" id="robots">
       <div class="content-block">
+        <p class="content-block-title">Unsere Roboter</p>
         <div class="row content-block-body">
-          <div class="col-12 col-md-6 product-entry"> <a href="{{ site.url }}{{ site.baseurl }}/products/product_1">
+          <div class="col-12 col-md-6 product-entry"> <a href="{{ site.url }}{{ site.baseurl }}/products#robots">
               <div class="image-container img-responsive bg-image hover-zoom"> <img
-                  src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/product_1.png" alt="Image of product 1">
+                  src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/AGV.jpg" alt="Image of product 1">
               </div>
             </a>
             <div class="product-info">
-              <p class="product-name">Product 1</p>
-              <p class="product-alias">Main property of product 1</p>
-              <p class="product-description">This latin motto accurately describes Alcides Robotics' mission: using
-                intelligent software (the mind) to drive autonomous mobile robots for material handling (moving
-                matters).</p> <a class="btn btn-primary"
-                href="{{ site.url }}{{ site.baseurl }}/products/product_2">Learn More</a>
+              <p class="product-name">Hercules AS Serie</p>
+              <p class="product-alias">AGV</p>
+              <p class="product-description">Die AS-Serie ist unsere AGV-Produktlinie, eine kosteneffiziente und sichere
+                Lösung für Automatisierung des Materialtransports in Logistik und Produktion.
+              <ul>
+                <li>Tragfähigkeit: 150~1000kg</li>
+                <li>Hub: 60 mm</li>
+                <li>Max. Geschwindigkeit: 1.5~1.6m/s</li>
+                <li>Navigation: Laser SLAM</li>
+                <li>Betriebszeit: 8h</li>
+                <li>Aufladezeit: 0.5~1.5h</li>
+              </ul>
+              </p> <a class="btn btn-primary" type="application/pdf"
+                href="{{ site.url }}{{ site.baseurl }}/assets/docs/products_datasheet.pdf">Produktblatt
+                herunterladen</a>
             </div>
           </div>
           <div class="col-12 col-md-6 product-entry">
             <a href="{{ site.url }}{{ site.baseurl }}/products/product_2">
               <div class="image-container img-responsive bg-image hover-zoom">
-                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/product_2.png" alt="Image of product 2">
+                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/forklift_1.png" alt="Image of product 2">
               </div>
             </a>
             <div class="product-info">
-              <p class="product-name">Product 2</p>
-              <p class="product-alias">Main property of product 2</p>
-              <p class="product-description">This latin motto accurately describes Alcides Robotics' mission: using
-                intelligent software (the mind) to drive autonomous mobile robots for material handling (moving
-                matters).</p>
-              <a class="btn btn-primary" href="{{ site.url }}{{ site.baseurl }}/products/product_2">Learn More</a>
+              <p class="product-name">Hercules AF series</p>
+              <p class="product-alias">Automatisierter Gabelstapler</p>
+              <p class="product-description">
+                Die AF-Serie ist unsere automatisierte Gabelstapler-Produktlinie, eine Allround-Lösung für die
+                Automatisierung des Materialflusses in Logistik und Produktion.
+              <ul>
+                <li>Tragfähigkeit: 1400~2500kg</li>
+                <li>Hub: 3000~5500mm</li>
+                <li>Max. Geschwindigkeit: 1.5m/s</li>
+                <li>Navigation: Laser SLAM</li>
+                <li>Betriebszeit: 10h</li>
+                <li>Aufladezeit: 2h</li>
+              </ul>
+              </p>
+              <a class="btn btn-primary" type="application/pdf"
+                href="{{ site.url }}{{ site.baseurl }}/assets/docs/products_datasheet.pdf">Produktblatt
+                herunterladen</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- End Products Row -->
+    <!-- Begin Software Row -->
+    <div class="row" id="software">
+      <div class="content-block">
+        <p class="content-block-title">Unsere Software</p>
+        <p class="content-block-body">
+          Unsere Software besteht aus einem auf Schwarmintelligenz basierenden Navigationssystem und einem KI-basierten
+          Sichtsystem.
+        </p>
+      </div>
+    </div>
+    <!-- End Software Row -->
+    <!-- Begin Products Row-->
+    <!-- Begin Services Row -->
+    <div class="row" id="services">
+      <div class="content-block">
+        <p class="content-block-title">Unsere Dienstleistungen</p>
+        <p class="content-block-body">
+          Neben unseren AMRs und autonomen Gabelstaplern bieten wir auch Lösungen aus einer Hand durch unsere
+          Dienstleistungen an, die Anforderungsanalyse, Lösungsdesign, Simulation, Optimierung, Implementierung und
+          Support umfassen. Beginnen Sie mit Ihren Anforderungen, wir werden Ihnen eine komplette Lösung anbieten.
+        </p>
+      </div>
+    </div>
+    <!-- End Service Row -->
     <!-- Start Product Query Row -->
     <div class="row" id="product-query">
-      <div class="content-block">
-        <p class="content-block-title">You want to know more about our smart vehicles?</p>
-        <p class="content-block-title">No problem. We are just a button way!</p>
-        <a class="btn btn-primary" href="{{ site.url }}{{ site.baseurl }}/contact">Send your query</a>
-      </div>
+        <div class="content-block product-query-text">
+            <p>Sie möchten mehr über unsere intelligenten Roboter erfahren?</p>
+            <p>Unser Vertriebsteam hilft Ihnen gerne weiter.<p>
+            <a class="btn btn-primary" href="{{ site.url }}{{ site.baseurl }}/de/contact#contact_form">Jetzt anfragen</a>
+        </div>
     </div>
     <!-- End Product Query Row -->
 </section>
 <!-- End Products Section-->
-
+<!--
 <div class=" container">
   <p><strong>TODO: </strong>Update pictures, layout, texts</p>
 </div>
+-->
