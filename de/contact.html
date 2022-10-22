@@ -164,13 +164,61 @@
 
 <body>
   <!-- Main Container -->
+<!-- Disable Google Maps
 <section id="map-banner">
   <div class="map-banner">
-    <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+    <iframe id="googlemap" width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
       src=""></iframe>
     <br />
   </div>
 </section>
+-->
+<!-- Begin #carousel-section-products -->
+<section id="carousel-section-contact">
+  <div id="carousel-products" class="carousel slide" data-bs-ride="false">
+    <!--
+    <div class="carousel-indicators"> <button type="button" data-bs-target="#carousel-products" data-bs-slide-to="0"
+        class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
+        data-bs-target="#carousel-products" data-bs-slide-to="1" aria-label="Slide 2"></button> <button type="button"
+        data-bs-target="#carousel-products" data-bs-slide-to="2" aria-label="Slide 3"></button> 
+    </div>
+    -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://alcides-robotics.github.io/assets/img/alcides/background_application.png" class="d-block w-100"
+          alt="slide-1">
+        <div class="carousel-caption d-none d-md-block">
+          <p class="carousel-title">ALCiDES Robotics</p>
+          <p>Smart mobile robots for efficient material handling</p>
+        </div>
+      </div>
+      <!--
+      <div class="carousel-item"> <img src="https://alcides-robotics.github.io/assets/img/slider/alcides/slide2.jpeg"
+          class="d-block w-100" alt="slide-2">
+        <div class="carousel-caption d-none d-md-block">
+          <p class="carousel-title">Second slide label</p>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item"> <img src="https://alcides-robotics.github.io/assets/img/slider/alcides/slide3.jpeg"
+          class="d-block w-100" alt="slide-3">
+        <div class="carousel-caption d-none d-md-block">
+          <p class="carousel-title">Third slide label</p>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      -->
+    </div>
+    <!--
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-products" data-bs-slide="prev">
+      <span class="fa-solid fa-angles-left fa-3x" aria-hidden="true"></span> <span
+        class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" type="button"
+      data-bs-target="#carousel-products" data-bs-slide="next"> <span class="fa-solid fa-angles-right fa-3x"
+        aria-hidden="true"></span> <span class="visually-hidden">Next</span> 
+    </button>
+    -->
+  </div>
+</section> <!-- End #carousel-section-contact -->
 <section id="contact-section" class="section-wrapper">
   <!-- Begin Main Container -->
   <div class="container">
@@ -178,7 +226,7 @@
     <div class="row">
       <!-- Begin Col Find-us -->
       <div class="col-lg-4 contact-block">
-          <h3>Finden Sie uns unter:</h3>
+        <h3>Find us at:</h3>
         <em>
           <p><strong>ALCiDES Robotics GmbH</strong></p>
           <p>Josefstraße 10</p>
@@ -193,10 +241,10 @@
       <!-- End Col Find-us -->
 
       <!-- Begin Col Contact Form -->
-      <div class="col-lg-8 contact-block">
+      <div class="col-lg-8 contact-block" id="contact_form">
         <h3>Kontaktformular</h3>
         <form action="https://api.web3forms.com/submit" method="POST" class="needs-validation">
-          <input type="hidden" name="access_key" value="9503d3e9-effc-41a9-9da2-a727c4d6aee3">
+          <input type="hidden" name="access_key" value="62e74fb1-deec-430e-b2a8-cd0e5af0cfe8">
           <fieldset>
             <div class="form-group">
               <label for="name" class="control-label">Name *</label>
@@ -237,7 +285,9 @@
               <p>Die mit einem Sternchen (*) gekennzeichneten Felder sind Pflichtfelder und müssen ausgefüllt werden.</p>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-            <input type="hidden" name="redirect" value="/de/thanks">
+            <input type="hidden" name="redirect" value="https://alcides-robotics.github.io/de/thanks">
+            <input type="hidden" name="from_name" value="ALCiDES Contact Form">
+            <input type="hidden" name="subject" value="New Contact From from ALCiDES Website">
           </fieldset>
         </form>
       </div>
@@ -248,7 +298,6 @@
   <!-- End Main Container -->
 </section>
 <!--End Main Section -->
-
 </body>
 
 <!-- BEGIN Footer -->
