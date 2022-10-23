@@ -28,11 +28,21 @@
                 <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/company"> {{ site.data.locales[page.lang].company | capitalize }} </a></p>
                 <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/software"> {{ site.data.locales[page.lang].software | capitalize }} </a></p>
                 -->
-                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products"> {{ site.data.locales[page.lang].products | capitalize }} </a></p>
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products"> {{
+                        site.data.locales[page.lang].products | capitalize }} </a></p>
+                <ul>
+                    <li><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#robots"> {{
+                            site.data.locales[page.lang].robots | capitalize }} </a></li>
+                    <li><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#software"> {{
+                            site.data.locales[page.lang].software | capitalize }} </a></li>
+                    <li><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#services"> {{
+                            site.data.locales[page.lang].services | capitalize }} </a></li>
+                </ul>
                 <!--
                 <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/blog"> {{ site.data.locales[page.lang].blog | capitalize }} </a></p>
                 -->
-                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/contact"> {{ site.data.locales[page.lang].contact | capitalize }} </a></p>
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/contact"> {{
+                        site.data.locales[page.lang].contact | capitalize }} </a></p>
             </div>
             <!--
             <div class="col-md-4">
@@ -66,14 +76,17 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="copyright text-start"></p>
-                &copy; Copyright 2022 &nbsp; <a href="{{ site.url }}{{ site.baseurl }}{{ append }}">ALCiDES Robotics GmbH</a>
+                &copy; Copyright 2022 &nbsp; <a href="{{ site.url }}{{ site.baseurl }}{{ append }}">ALCiDES Robotics
+                    GmbH</a>
                 </p>
             </div>
             <div class="col-md-6">
                 <p class="imprint text-end">
-                    <a href="{{ site.url }}{{ site.baseurl}}{{ append }}/privacy-policy"> {{ site.data.locales[page.lang].privacy_policy | upcase}} </a>
+                    <a href="{{ site.url }}{{ site.baseurl}}{{ append }}/privacy-policy"> {{
+                        site.data.locales[page.lang].privacy_policy | upcase}} </a>
                     &nbsp;
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ append }}/imprint"> {{ site.data.locales[page.lang].imprint | upcase}} </a>
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ append }}/imprint"> {{
+                        site.data.locales[page.lang].imprint | upcase}} </a>
                 </p>
             </div>
         </div>
