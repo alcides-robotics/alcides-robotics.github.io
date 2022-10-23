@@ -19,17 +19,32 @@
                     </em>
                     {{ site.data.locales[page.lang].phone }}: 0049 (0) 214 314 997 0 <br>
                     {{ site.data.locales[page.lang].fax }}: 0049 (0) 214 314 997 17 <br>
-                    {{ site.data.locales[page.lang].email }}: info@alcides-robotics.com<br>
+                    {{ site.data.locales[page.lang].email }}: info@alcides.eu<br>
                 </p>
             </div>
             <div class="col-md-4">
                 <h3><i class="fa fa-external-link"></i> {{ site.data.locales[page.lang].links | capitalize }}</h3>
+                <!--
                 <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/company"> {{ site.data.locales[page.lang].company | capitalize }} </a></p>
                 <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/software"> {{ site.data.locales[page.lang].software | capitalize }} </a></p>
-                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products"> {{ site.data.locales[page.lang].products | capitalize }} </a></p>
+                -->
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products"> {{
+                        site.data.locales[page.lang].products | capitalize }} </a></p>
+                <ul>
+                    <li><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#robots"> {{
+                            site.data.locales[page.lang].robots | capitalize }} </a></li>
+                    <li><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#software"> {{
+                            site.data.locales[page.lang].software | capitalize }} </a></li>
+                    <li><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#services"> {{
+                            site.data.locales[page.lang].services | capitalize }} </a></li>
+                </ul>
+                <!--
                 <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/blog"> {{ site.data.locales[page.lang].blog | capitalize }} </a></p>
-                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/contact"> {{ site.data.locales[page.lang].contact | capitalize }} </a></p>
+                -->
+                <p><a href="{{ site.url }}{{ site.baseurl }}{{ append }}/contact"> {{
+                        site.data.locales[page.lang].contact | capitalize }} </a></p>
             </div>
+            <!--
             <div class="col-md-4">
                 <h3><i class="fa fa-heart"></i> {{ site.data.locales[page.lang].follow_us }}</h3>
                 <div id="social-icons">
@@ -54,20 +69,24 @@
 
                 </div>
             </div>
+            -->
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <p class="copyright text-start"></p>
-                &copy; Copyright 2022 &nbsp; <a href="{{ site.url }}{{ site.baseurl }}{{ append }}">ALCiDES Robotics GmbH</a>
+                &copy; Copyright 2022 &nbsp; <a href="{{ site.url }}{{ site.baseurl }}{{ append }}">ALCiDES Robotics
+                    GmbH</a>
                 </p>
             </div>
             <div class="col-md-6">
                 <p class="imprint text-end">
-                    <a href="{{ site.url }}{{ site.baseurl}}{{ append }}/privacy-policy"> {{ site.data.locales[page.lang].privacy_policy | upcase}} </a>
+                    <a href="{{ site.url }}{{ site.baseurl}}{{ append }}/privacy-policy"> {{
+                        site.data.locales[page.lang].privacy_policy | upcase}} </a>
                     &nbsp;
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ append }}/imprint"> {{ site.data.locales[page.lang].imprint | upcase}} </a>
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ append }}/imprint"> {{
+                        site.data.locales[page.lang].imprint | upcase}} </a>
                 </p>
             </div>
         </div>

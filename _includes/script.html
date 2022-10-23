@@ -10,8 +10,8 @@
 <script>
   $(function ($) {
     let url = window.location.href;
-    $('li a').each(function () {
-      if (this.href === url.replace(/\/+$/, '') || this.href === url) {
+    $("li a:not('.dropdown-item')").each(function () {
+      if (this.href === url.replace(/\/+$/, '') || this.href === url || this.href == url.split('#')[0]) {
         $(this).closest('li').addClass('active');
       }
     });

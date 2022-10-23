@@ -20,6 +20,7 @@
                     <a class="nav-link" aria-current="page" href="{{ site.url }}{{ site.baseurl }}{{ append }}">{{
                         site.data.locales[page.lang].home }}</a>
                 </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ append }}/software">{{
                         site.data.locales[page.lang].software }}</a>
@@ -27,7 +28,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ append }}/products">{{
                         site.data.locales[page.lang].products }}</a>
+                -->
+                <!-- Products dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ site.url }}{{ site.baseurl }}{{ append }}/products"
+                        id="navbarProductDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        {{ site.data.locales[page.lang].products }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarProductDropdown">
+                        <li><a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#robots">
+                                    {{ site.data.locales[page.lang].robots }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#software">
+                                    {{ site.data.locales[page.lang].software | capitalize }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ append }}/products#services">
+                                    {{ site.data.locales[page.lang].services }}</a></li>
+                    </ul>
                 </li>
+                </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ append }}/company">{{
                         site.data.locales[page.lang].company }}</a>
@@ -36,6 +55,7 @@
                     <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ append }}/blog"> {{
                         site.data.locales[page.lang].blog }}</a>
                 </li>
+                -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ append }}/contact">{{
                         site.data.locales[page.lang].contact }}</a>

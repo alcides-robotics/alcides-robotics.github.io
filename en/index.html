@@ -1,5 +1,195 @@
 ---
-layout: home_style
+layout: default_style
 reference: home
 permalink: /
 ---
+
+<!-- Begin #carousel-section-home -->
+<section id="carousel-section-home">
+    <div id="carousel-home" class="carousel slide" data-bs-ride="false">
+        <!--
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel-home" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/background_banner.png"
+                    class="d-block w-100" alt="slide-1">
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="carousel-title">ALCiDES Robotics</p>
+                    <p>Smart mobile robots for efficient material handling</p>
+                </div>
+            </div>
+            <!--
+            <div class="carousel-item">
+                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/slider/alcides/slide2.jpeg"
+                    class="d-block w-100" alt="slide-2">
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="carousel-title">Second slide label</p>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/slider/alcides/slide3.jpeg"
+                    class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="carousel-title">Third slide label</p>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            -->
+        </div>
+        <!--
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-home" data-bs-slide="prev">
+            <span class="fa-solid fa-angles-left fa-3x" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-home" data-bs-slide="next">
+            <span class="fa-solid fa-angles-right fa-3x" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        -->
+    </div>
+</section>
+<!-- End #carousel-section-home -->
+
+
+<!-- Begin #profile-section -->
+<section id="profile" class="section-wrapper">
+    <!-- Begin Main Container -->
+    <div class="container">
+        <!-- Begin Summary Row -->
+        <div class="row">
+            <div class="content-block">
+                <p class="content-block-title">Mens agitat molem</p>
+                <p class="content-block-subtitle">"Mind moves matter"</p>
+                <div class="row text-start content-block-body">
+                    <div class="col-md-6">
+                        ALCiDES Robotics is a high-tech startup based in Leverkusen, Germany. Our team members come from
+                        KU Leuven and Eindhoven University of Technology with years of experience in automation/robot development and operation.
+                    </div>
+                    <div class="col-md-6">
+                        Our mission is to develop smart mobile robots for efficient material handling by, as
+                        our Latin motto describes, using intelligent software (the mind) to drive autonomous mobile robots for
+                        material handling (moving matters).
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Summary Row -->
+
+
+        <!-- Begin Feature Row-->
+        <div class="row">
+            <div class="content-block">
+                <div class="content-block-title">
+                    Why ALCiDES?
+                </div>
+                {% assign node = site.pages | where: "lang", page.lang %}
+                {% for item in node %}
+                {% if item.reference == "products" %}
+                {% assign page_product = item %}
+                {% endif %}
+                {% endfor %}
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="feature-entry">
+                            <p class="feature-icon"><span class="fa-solid fa-microchip fa-5x"></span></p>
+                            <h4 class="feature-title">Standardized Products</h4>
+                            <p class="feature-body">Standardized products for customized applications: AMR, Automated
+                                Forklift for versatile applications</p>
+                            <p><a href="{{ page_product.url }}#robots">Find Out More</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="feature-entry">
+                            <p class="feature-icon"><i class="fa-solid fa-code fa-5x"></i></p>
+                            <h4 class="feature-title">Intelligent Software</h4>
+                            <p class="feature-body"> Seamless indoor-outdoor navigation system + AI vision system for diverse use cases</p>
+                            <p><a href="{{ page_product.url }}#software">Find Out More</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="feature-entry">
+                            <p class="feature-icon"><i class="fa-solid fa-suitcase fa-5x"></i></p>
+                            <h4 class="feature-title">One-Stop Solution</h4>
+                            <p class="feature-body">Requirements analysis, solution design, simulation, optimization, turnkey delivery and support</p>
+                            <p><a href="{{ page_product.url }}#services">Find Out More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Feature Row -->
+        <!-- Begin Products Row-->
+        <div class="row">
+            <div class="content-block">
+                <div class="content-block-title">
+                    <p>Meet Hercules</p>
+                </div>
+                <div class="row content-block-body">
+                    <div class="col-12 col-md-6 product-entry">
+                        <a href="{{ site.url }}{{ site.baseurl }}/products#robots">
+                            <div class="image-container img-responsive bg-image hover-zoom">
+                                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/AGV.jpg"
+                                    alt="Image of product 1">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-name">Hercules AS series
+                            <p>
+                            <p class="product-alias">AGV</p>
+                            <p class="product-description">Hercules AS series is our AGV products, with load capacity from 150 kg - 1000 kg and lift height up to 60 mm.</p>
+                            <a class="btn btn-primary"
+                                href="{{ site.url }}{{ site.baseurl }}/products#robots">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 product-entry">
+                        <a href="{{ site.url }}{{ site.baseurl }}/products#robots">
+                            <div class="image-container img-responsive bg-image hover-zoom">
+                                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/alcides/forklift_1.png"
+                                    alt="Image of product 2">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-name">Hercules AF series</p>
+                            <p class="product-alias">Automated Forklift</p>
+                            <p class="product-description"> Hercules AF series is our automated forklift products, with load capacity from 1400kg to 2500kg, lift height up to 5.5m.</p>
+                            <a class="btn btn-primary"
+                                href="{{ site.url }}{{ site.baseurl }}/products#robots">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Products Row -->
+        <!-- Start Product Query Row -->
+        <div class="row" id="product-query">
+            <div class="content-block product-query-text">
+                <p>You want to know more about our smart robots?</p>
+                <p>Our sales team will be happy to help you.</p>
+                <a class="btn btn-primary" href="{{ site.url }}{{ site.baseurl }}/contact#contact_form">Request Now</a>
+            </div>
+        </div>
+        <!-- End Product Query Row -->
+    </div>
+    <!-- End Main Container -->
+</section>
+<!-- End #services-section -->
+</div>
+
+<!-- TODO 
+<div class="container">
+    <p><strong>TODO: </strong>Update pictures, layout, texts</p>
+</div>
+-->

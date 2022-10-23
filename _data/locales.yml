@@ -5,6 +5,8 @@ en:
   company: company
   blog: blog
   contact: contact
+  robots: Robots
+  services: Services
   links: links
   follow_us: Follow us
   imprint: imprint
@@ -15,6 +17,7 @@ en:
   phone: Phone
   fax: Fax
   email: Email
+  find_us_at: Find us at
   contact_form: Contact Form
   name: Name
   phone_number: Phone number
@@ -37,6 +40,8 @@ de:
   company: unternehmen
   blog: blog
   contact: kontakt
+  robots: Robots
+  services: Dienstleistungen
   links: links
   follow_us: Folge uns
   imprint: impressum
@@ -47,6 +52,7 @@ de:
   phone: Telefon
   fax: Fax
   email: Email
+  find_us_at: Finden Sie uns unter
   contact_form: Kontaktformular
   name: Name
   phone_number: Telefonnummer
@@ -70,6 +76,8 @@ cn:
   company: 公司
   blog: 博客
   contact: 联系我们
+  robots: 机器人
+  services: 服务
   links: 链接
   follow_us: 关注我们
   imprint: 版本说明
@@ -80,6 +88,7 @@ cn:
   phone: 电话
   fax: 传真
   email: 电子邮件
+  find_us_at: 联系我们
   contact_form:  联系表单
   name: 姓名
   phone_number: 电话号码 
