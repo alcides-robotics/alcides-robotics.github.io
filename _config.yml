@@ -54,7 +54,7 @@ plugins:
 #   - vendor/ruby/
 
 # languages
-languages: [en, de]
+languages: [en, de, cn]
 default_lang: en
 defaults:
   -
@@ -69,6 +69,12 @@ defaults:
       types: pages
     values:
       lang: de
+  -
+    scope:
+      path: cn 
+      types: pages
+    values:
+      lang: cn
 
 exclude:
   - README.md
