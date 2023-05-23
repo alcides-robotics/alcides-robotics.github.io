@@ -3,7 +3,7 @@
 
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/"><img class="logo"
-                src="{{ site.url }}{{ site.baseurl }}/assets/img/slider/alcides/logo.png" alt="Alcides"></a>
+                src="{{ site.url }}{{ site.baseurl }}/assets/img/slider/alcides/alcides_logo.png" alt="Alcides"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars fa-2x"></i>
@@ -87,7 +87,7 @@
                     {%- assign node = site.pages | where: "reference", page.reference | sort: 'lang' %}
                     {%- for item in node %}
                     {%- if page.lang == item.lang %}
-                    <a class="nav-link dropdown-toggle" href="item.url"
+                    <a class="nav-link dropdown-toggle dropdown-item" href="{{ item.url }}"
                         id="navbarLangSelector" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="flag flag-{{ site.data.locales[page.lang].flag }}"></i> {{ page.lang }}
@@ -95,9 +95,9 @@
                     {%- endif %}
                     {%- endfor %}
 
+                    <ul class="dropdown-menu" aria-labelledby="navbarLangSelector">
                     {%- for item in node %}
                     {%- if page.lang != item.lang %}
-                    <ul class="dropdown-menu" aria-labelledby="navbarLangSelector">
                         <li><a class="dropdown-item" href="{{ item.url }}"><i
                                     class="flag flag-{{ site.data.locales[item.lang].flag }}"></i>{{ item.lang | upcase }}</a></li>
                     {%- endif %}
@@ -110,7 +110,7 @@
                     {%- assign node = site.documents | where: "reference", page.reference | sort: 'lang' %}
                     {%- for item in node %}
                     {%- if page.lang == item.lang %}
-                    <a class="nav-link dropdown-toggle" href="item.url"
+                    <a class="nav-link dropdown-toggle dropdown-item" href="{{ item.url }}"
                         id="navbarLangSelector" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="flag flag-{{ site.data.locales[page.lang].flag }}"></i> {{ page.lang }}
@@ -118,9 +118,9 @@
                     {%- endif %}
                     {%- endfor %}
 
+                    <ul class="dropdown-menu" aria-labelledby="navbarLangSelector">
                     {%- for item in node %}
                     {%- if page.lang != item.lang %}
-                    <ul class="dropdown-menu" aria-labelledby="navbarLangSelector">
                         <li><a class="dropdown-item" href="{{ item.url }}"><i
                                     class="flag flag-{{ site.data.locales[item.lang].flag }}"></i>{{ item.lang | upcase }}</a></li>
                     {%- endif %}
