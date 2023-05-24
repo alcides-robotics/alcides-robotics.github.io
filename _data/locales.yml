@@ -31,7 +31,7 @@ en:
   contact_form_agreement_1: "I agree with"
   contact_form_agreement_2: "the terms of use"
   contact_form_agreement_3: "and"
-  contact_form_agreement_4: "the privacy_policy"
+  contact_form_agreement_4: "the privacy policy"
   contact_form_agreement_5: "."
 de:
   home: startseite
@@ -91,7 +91,7 @@ cn:
   find_us_at: 联系我们
   contact_form:  联系表单
   name: 姓名
-  phone_number: 电话号码 
+  phone_numbe: 电话号码 
   message: 留言
   placeholder_name: 请输入您的姓名
   placeholder_company: 请输入您公司名
