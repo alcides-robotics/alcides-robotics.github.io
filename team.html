@@ -188,8 +188,14 @@
     });
   });
 </script>
+<!-- Update copyright year automatically -->
+<script>
+  $(function($) {
+  var date = new Date().getFullYear();
+  document.getElementById("copyright-year").innerHTML = date;
+  });
+</script>
 <!-- End Scripts -->
-
 
 <body>
   <!-- Main Container -->
@@ -341,7 +347,7 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="copyright text-start"></p>
-                &copy; Copyright 2024 &nbsp; <a href="https://www.alcides.tech">ALCiDES Robotics
+                &copy; Copyright <span id="copyright-year"></span> &nbsp; <a href="https://www.alcides.tech">ALCiDES Robotics
                     GmbH</a>
                 </p>
             </div>
