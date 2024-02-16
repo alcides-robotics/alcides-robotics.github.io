@@ -9,7 +9,9 @@ Bootstrap v5.2.0-beta1 (https://getbootstrap.com/)
 * ==========================================================================
 */
 :root {
-    --alcides-blue: #0565B3
+    --alcides-blue: #0565B3;
+    --grayscale_carousel_img: 0%;
+    --brightness_carousel_img: 100%;
 }
 
 .logo {
@@ -434,6 +436,11 @@ a:hover {
 .carousel-caption .carousel-title {
     /* color: var(--alcides-blue); */
     font-size: 3rem;
+}
+
+.carousel-item img {
+    -webkit-filter: grayscale(var(--grayscale_carousel_img)) brightness(var(--brightness_carousel_img));
+    filter: grayscale(var(--grayscale_carousel_img)) brightness(var(--brightness_carousel_img));
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
