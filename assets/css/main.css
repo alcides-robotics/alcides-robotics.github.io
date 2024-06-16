@@ -494,3 +494,32 @@ footer .btn-group {
     font-size: 22px;
     padding-right: 10px;
 }
+
+
+footer .image-container {
+    width: 100%;
+    max-width: 500px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    /* border: 2px solid #ccc; /* Optional border styling */
+    padding: 10px; /* Optional padding */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for a nice effect */
+    text-align: left; /* Center the image inside the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+footer .image-container img {
+    max-width: 50%;
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block;
+}
+@media (max-width: 600px) {
+    footer .image-container {
+        max-width: 100%; /* Full width on small screens */
+        padding: 5px; /* Adjust padding for small screens */
+        border-width: 1px; /* Adjust border width for small screens */
+    }
+}
+@media (min-width: 1200px) {
+    footer .image-container {
+        max-width: 800px; /* Increase max-width for large screens */
+    }
+}
