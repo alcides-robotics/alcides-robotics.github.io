@@ -7,6 +7,10 @@ en:
   contact: contact
   robots: Robots
   services: Services
+  drive_technology: Drive technology
+  slewing_bearings: Slewing bearings
+  roller_bearings: Roller bearings
+  machine_components: Machine components
   links: links
   follow_us: Follow us
   imprint: imprint
@@ -42,6 +46,10 @@ de:
   contact: kontakt
   robots: Robots
   services: Dienstleistungen
+  drive_technology: Antriebstechnik
+  slewing_bearings: Drehkranzlager
+  roller_bearings: Wälzlager
+  machine_components: Maschinenkomponenten
   links: links
   follow_us: Folge uns
   imprint: impressum
@@ -78,6 +86,10 @@ cn:
   contact: 联系我们
   robots: 机器人
   services: 服务
+  drive_technology: 驱动技术
+  slewing_bearings: 回转支承
+  roller_bearings: 滚动轴承
+  machine_components: 机械零部件
   links: 链接
   follow_us: 关注我们
   imprint: 版本说明
